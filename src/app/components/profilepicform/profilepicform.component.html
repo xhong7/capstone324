@@ -1,0 +1,7 @@
+<br><br><br><br><br>
+<div class="form-outline mb-4">
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()"> <!--need to change the action to the api, or have the submit call a function that submits the resume-->
+       <input type="file" name="file" id="file" (change)="onFileSelect($event)"/>
+       <button type="submit">Upload a Profile Picture</button>
+    </form>
+</div>

@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+<br><br><br><br>
+<div class="container">
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="career-search mb-60">
+
+                        <form action="#" class="career-form mb-60">
+                            <div *ngIf="!this.manager" class="row">
+                                <div class="col-md-6 col-lg-3 my-3">
+                                    <div class="input-group position-relative">
+                                        <input type="text" name="theTitle" class="custom-select" placeholder="Filter by Job Title" id="keywords" [(ngModel)]="theTitle">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 my-3">
+                                    <div>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Select Job Pay</mat-label>
+                                            <select [(ngModel)]="thePay" name="thePay" matNativeControl required>
+                                              <option *ngFor="let o of payDropdown" [value]="o.value">{{o.name}}</option>
+                                            </select>
+                                          </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 my-3">
+                                    <div>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Select Job Field</mat-label>
+                                            <select [(ngModel)]="theField" name="theField" matNativeControl required>
+                                              <option *ngFor="let o of fieldDropdown" [value]="o.value">{{o.name}}</option>
+                                            </select>
+                                          </mat-form-field>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-3 my-3">
+                                    <input class="btn btn-lg btn-block btn-light btn-custom" type="submit" value="Submit" (click)="doSubmit()">
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="filter-result">
+                            <h1 *ngIf="!jobExist">No Job Avaliable</h1>
+                            <app-posting  *ngFor="let post of postings" [post]="post"></app-posting>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>

@@ -1,0 +1,17 @@
+	<!-- Navigation-->
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+		<div class="container px-5">
+			<a class="navbar-brand" href="#page-top">Job Recruitment App</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" routerLink="/home">{{nav.item1}}</a></li>
+					<li class="nav-item" *ngIf="this.theRole == 'applicant'"><a class="nav-link" routerLink="/profile">{{nav.item2}}</a></li>
+					<li class="nav-item" *ngIf="this.theRole == 'applicant'"><a class="nav-link" routerLink="/jobpostings">Jobs</a></li> <!--need to add the applicant url to the end-->
+					<li class="nav-item" *ngIf="this.theRole == 'manager'"><a class="nav-link" routerLink="/company">{{nav.item2}}</a></li> <!--need to add the manager url to the end-->
+					<li class="nav-item"><a routerLink="/signup" class="nav-link">{{nav.item3}}</a></li>
+					<li (click)="ifLogin()" class="nav-item"><a routerLink="/login" class="nav-link" >{{nav.item4}}</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>

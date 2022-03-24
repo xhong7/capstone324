@@ -1,0 +1,74 @@
+<br><br><br><br><br>
+<div class="container">
+    <div class="main-body">
+          <!-- /Breadcrumb -->
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src={{theLogo}} alt="Admin" class="rounded-circle" width="150" onerror="this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png';this.onerror='';">
+                    <div class="mt-3">
+                      <h4>{{thePage.company_name}}</h4>
+                      <p class="text-muted font-size-sm">{{thePage.company_address}}</p>
+                      <button class="btn btn-primary" (click)="uploadLogo()">Upload Logo Image</button>
+                      <button class="btn btn-primary" (click)="addManager()">Add a Manager</button>
+                      <button class="btn btn-secondary" (click)="redirectJobs()">Our Jobs</button>
+                      <button class="btn btn-secondary" (click)="addJob()">Add a Job</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Description</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{thePage.company_desc}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Website</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{thePage.company_website}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{thePage.company_email}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Our Mission</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{thePage.company_mission}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-info " routerLink="/companyform">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
