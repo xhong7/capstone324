@@ -13,7 +13,8 @@ public nav:any={
   item1:'Home',
   item2:'About',
   item3:'Sign Up',
-  item4:'Log In'
+  item4:'Log In',
+  item5: 'Jobs'
 }
 theRole: any;
 ngOnInit(): void {
@@ -25,6 +26,7 @@ ngDoCheck(): void {
       this.nav.item2='Applicant Profile';
       this.nav.item3='';
       this.theRole = 'applicant';
+      this.nav.item5='Jobs';
 
     }
     if(this.data.role=='manager'){
@@ -41,8 +43,10 @@ ngDoCheck(): void {
     if(this.data.role==''){
       
       this.nav.item2='';
+      this.nav.item5='';
       this.nav.item3='Sign Up';
       this.nav.item4='Log In';
+      
    
     }
   }
